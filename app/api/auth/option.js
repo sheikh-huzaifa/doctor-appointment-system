@@ -27,7 +27,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
                   if (user) {
                 return user
-              } else{return null}               
+              } else{return user}               
             }
         })
     ],
