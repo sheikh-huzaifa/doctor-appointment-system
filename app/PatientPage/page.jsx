@@ -18,6 +18,7 @@ function PatientPage({ session, user }) {
   return (
 
      <div className="container h-full text-center mt-5">
+      <button className="btn btn-primary" onClick={()=>signOut()}>log Out</button>
     <h1 className="text-5xl">Appointment</h1>
         <div className=" mx-auto h-full text-center d-flex justify-content-center align-items-center mt-3">
              
