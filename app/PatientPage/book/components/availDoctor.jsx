@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
-const availDoctor = props => {
-    const[availDoc,setAvailDOc]=useState()
+const AvailDoctor = props => {
+    const[availDoc,setAvailDOc]= useState('')
 
      
-        useEffect(()=>{
+        React.useEffect(()=>{
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
@@ -78,6 +78,6 @@ const availDoctor = props => {
   )
 }
 
-availDoctor.propTypes = {}
+AvailDoctor.propTypes = {}
 
-export default availDoctor
+export default AvailDoctor

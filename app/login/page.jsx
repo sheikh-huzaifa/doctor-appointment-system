@@ -1,16 +1,15 @@
  "use client"
- import React from 'react';
-import { signIn } from 'next-auth/react';
+ import { signIn } from 'next-auth/react';
 import { redirect } from 'next/navigation'; 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
  import PropTypes from 'prop-types'
 
-const login = props => {
+const Login = props => {
 
      
-    const [email,setemail]=useState("")
-    const [password,setuserPass]= useState("")
+    const [email,setemail]= useState('')
+    const [password,setuserPass]= useState('')
   
     const handleLogin = async (e) => {
       e.preventDefault();
@@ -66,7 +65,7 @@ const login = props => {
     );
 }
 
-login.propTypes = {}
+Login.propTypes = {}
 
-export default login
+export default Login
 

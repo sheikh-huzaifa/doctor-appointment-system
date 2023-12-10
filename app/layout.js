@@ -2,7 +2,7 @@
 import './globals.css'
 import SubLayout from './subLayout'
 import './scss/index.scss'
-
+import React from 'react'
 
 
 export const metadata = {
@@ -11,5 +11,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children   }) {
-  return  <SubLayout  children={children} /> 
+  return  <SubLayout>
+    {children} 
+  </SubLayout> 
 }

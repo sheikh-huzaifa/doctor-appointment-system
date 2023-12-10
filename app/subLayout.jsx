@@ -12,7 +12,8 @@ const SubLayout = ({children}) => {
         
         <body className={inter.className}>
          
-         <Sub2Layout children={children}/>
+         <Sub2Layout > {children}
+         </Sub2Layout >
           
         </body>
         
