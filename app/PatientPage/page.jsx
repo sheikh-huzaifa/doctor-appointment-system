@@ -9,11 +9,11 @@ function PatientPage({ session, user }) {
   const { data: session1, status } = useSession();
   console.log(session1);
 
-//   useEffect(() => {
-//     if (status === "unauthenticated") {
-//       redirect("/login", "push"); // Redirect unauthorized users
-//     }
-//   }, [status]);
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      redirect("/login", "push"); // Redirect unauthorized users
+    }
+  }, [status]);
 
   return (
 
