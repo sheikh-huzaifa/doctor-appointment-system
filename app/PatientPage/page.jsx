@@ -2,6 +2,7 @@
 import { getSession, useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { signOut } from "next-auth/react";
+import { useEffect } from "react";
  
 import Link from "next/link";
 
