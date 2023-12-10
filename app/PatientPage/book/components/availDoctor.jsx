@@ -12,7 +12,7 @@ const AvailDoctor = props => {
                 redirect: 'follow'
               };
               
-              fetch("http://localhost:3000/api/doctors", requestOptions)
+              fetch("https://doctor-appointment-system-two.vercel.app/api/doctors", requestOptions)
                 .then(response => response.json())
                 .then(result => setAvailDOc(result ))
                 .catch(error => console.log('error', error));

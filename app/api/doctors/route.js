@@ -3,6 +3,8 @@ import { NextResponse } from "next/server"
 
 export const GET = async()=>{
     try {
+        await prisma.$connect()
+
         const users = await prisma.doctor.findMany()
         return NextResponse.json({message:"Working....",users})
     } catch (error) {

@@ -12,26 +12,22 @@ import CredentialsProvider from "next-auth/providers/credentials";
             },
             async authorize(credentials ) {
                  
-                const user = await prisma.patients.findFirst({
-                    where: {
-                        AND: [
-                          {
-                            email: credentials.email,
-                          },
-                          {
-                            password: credentials.password,
-                          },
-                        ],
+              const user = await prisma.patients.findFirst({
+                where: {
+                    AND: [
+                      {
+                        email: credentials.email,
                       },
-                    });
+                      {
+                        password: credentials.password,
+                      },
+                    ],
+                  },
+                });
 
-                     const user1 =[]
-                    Object.values(user).map((x)=>{user1.push(x);console.log("user1",user1);})
-                 console.log(typeof(user))
-                 const data = user.role
                   if (user) {
-                    return user
-                  }                
+                return user
+              } else{return null}               
             }
         })
     ],
