@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
-import PropTypes from 'prop-types'
- import Sub2Layout from './sub2Layout'
+import Sub2Layout from './sub2Layout'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
