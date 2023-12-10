@@ -10,6 +10,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
                 email: { label: "Email", type: "text", placeholder: "Email" },
                 password: { label: "Password", type: "password", placeholder: "Password" }
             },
+            
             async authorize(credentials ) {
                  console.log("credentials.email",credentials.email);
               const user = await prisma.patients.findFirst({
@@ -25,7 +26,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
             }
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET,
+    // secret: process.env.NEXTAUTH_SECRET,
     
     callbacks: {
         async jwt({ token, account }) {
