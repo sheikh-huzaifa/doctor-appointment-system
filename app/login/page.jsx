@@ -29,7 +29,7 @@ const Login = props => {
          alert("Enter valid details")
       } else {
         // Redirect to dashboard or desired page upon successful login
-        redirect('/PatientPage',"push");
+        redirect('/ ',"push");
         console.log("fuck yeah done");
       }
     };
