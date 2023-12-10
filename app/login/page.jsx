@@ -48,10 +48,10 @@ const Login = props => {
                                     <h2>Login</h2>
                                     </div>
                                     <div className="row mb-3">
-                                    <input type="username" placeholder='Enter Your Username' className='form-control'  onChange={(e)=>{setemail(e.target.value)}}/>
+                                    <input type="username" placeholder='Enter Your Username' className='form-control'  onChange={(e)=>{setemail(e.target.value); console.log("email:",e.target.value);}}/>
                                     </div>
                                     <div className="row">
-                                    <input type="password" placeholder='Enter Your Password' className='form-control' onChange={(e)=>{setuserPass(e.target.value)}}/>
+                                    <input type="password" placeholder='Enter Your Password' className='form-control' onChange={(e)=>{setuserPass(e.target.value); console.log("password:",e.target.value)}}/>
                                     </div>
                                     <button className='btn btn-outline-success w-50 my-4'>Summit</button>
                                 </form>
