@@ -1,2 +1,2 @@
-const { PrismaClient } = require('@prisma/client/edge')
+const { PrismaClient } = require('@prisma/client')
  export   const prisma = new PrismaClient()
