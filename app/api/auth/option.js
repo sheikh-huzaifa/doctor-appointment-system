@@ -11,7 +11,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
                 password: { label: "Password", type: "password", placeholder: "Password" }
             },
             async authorize(credentials ) {
-                 console.log("email: credentials.email:",email: credentials.email);
+                 console.log("email: credentials.email:",  credentials.email);
               const user = await prisma.patients.findFirst({
                 where: {
                   email: credentials.email
