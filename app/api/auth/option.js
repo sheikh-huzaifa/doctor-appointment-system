@@ -31,7 +31,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
             }
         })
     ],
-    // secret: process.env.SECRETE_KEYS,
+    secret: "sdafasdfa345235rdasf",
     
     
    
