@@ -17,7 +17,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
                      
                         email: credentials.email,
                       
-                });
+            }});
 
                   if (user) {
                 return user
