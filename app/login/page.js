@@ -1,18 +1,16 @@
  "use client"
- import { useState } from 'react';
+ import React from 'react';
 import { signIn } from 'next-auth/react';
-import { Redirect } from 'next';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation'; 
+import { useState } from 'react';
 
-
-import React from 'react'
-import PropTypes from 'prop-types'
+ import PropTypes from 'prop-types'
 
 const login = props => {
 
-    const router = useRouter();
+     
     const [email,setemail]=useState("")
-    const [password,setuserPass]=useState("")
+    const [password,setuserPass]= useState("")
   
     const handleLogin = async (e) => {
       e.preventDefault();
@@ -32,7 +30,7 @@ const login = props => {
          alert("Enter valid details")
       } else {
         // Redirect to dashboard or desired page upon successful login
-        router.push('/PatientPage');
+        redirect('/PatientPage',"push");
         console.log("fuck yeah done");
       }
     };
