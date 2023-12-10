@@ -19,14 +19,14 @@ import CredentialsProvider from "next-auth/providers/credentials";
                         email: credentials.email,
                       
             }});
-
+            console.log("user",user);
                   if (user) {
                 return user
               } else{return user}               
             }
         })
     ],
-    // secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET,
     
     callbacks: {
         async jwt({ token, account }) {

@@ -2,21 +2,24 @@
  import { signIn } from 'next-auth/react';
 import { redirect } from 'next/navigation'; 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 
  import PropTypes from 'prop-types'
 
 const Login = props => {
 
+  const { push } = useRouter();
      
     const [email,setemail]= useState('')
     const [password,setuserPass]= useState('')
   
-    const handleLogin = async (e) => {
+    const handleLogin =  (e) => {
       e.preventDefault();
       console.log("email",email);
       console.log("password",password);
   
-      const result = await signIn('credentials', {
+      const result =  signIn('credentials', {
         redirect: false,
         email,
         password,
@@ -28,9 +31,8 @@ const Login = props => {
         console.error('Login failed:', result.error);
          alert("Enter valid details")
       } else {
-        // Redirect to dashboard or desired page upon successful login
-        redirect('/ ',"push");
-        console.log("fuck yeah done");
+        console.log("fuck yeah done");        push("/PatientPage ");
+        
       }
     };
   

@@ -5,8 +5,8 @@ export default withAuth(
     // console.log(req.nextauth.token)
   },
   {
-    secret: process.env.SECRET_KEYS
+    secret: process.env.NEXTAUTH_SECRET
   }
 )
 
-export const config = { matcher: ["/"] }
+export const config = { matcher: ["/PatientPage"] }
