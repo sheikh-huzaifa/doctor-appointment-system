@@ -2,7 +2,6 @@
 import './globals.css'
 import SubLayout from './subLayout'
 import './scss/index.scss'
-import { Provider } from 'next-auth/react'
 
 
 
