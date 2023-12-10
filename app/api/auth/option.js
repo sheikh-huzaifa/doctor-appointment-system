@@ -31,7 +31,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
             }
         })
     ],
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.SECRETE_KEYS,
     
     callbacks: {
         async jwt({ token, account }) {
