@@ -11,20 +11,28 @@ import CredentialsProvider from "next-auth/providers/credentials";
                 password: { label: "Password", type: "password", placeholder: "Password" }
             },
             async authorize(credentials ) {
-                 console.log("email: credentials.email:",  credentials.email);
+                 console.log("credentials.email",credentials.email);
               const user = await prisma.patients.findFirst({
                 where: {
-                  email: credentials.email
+                    AND: [
+                      {
+                        email: credentials.email,
+                      },
+                      {
+                        password: credentials.password,
+                      },
+                    ],
                   },
                 });
 
                   if (user) {
                 return user
-              } else{return user}               
+              } else{return null}               
             }
         })
     ],
-    secret: "sdafasdfa345235rdasf",
+    secret: process.env.NEXTAUTH_SECRET,
+    
     callbacks: {
         async jwt({ token, account }) {
           // Persist the OAuth access_token to the token right after signin
@@ -39,7 +47,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
           return session
         }
       }
-    
    
      
 }
