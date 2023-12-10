@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function PatientPage({ session, user }) {
   const { data: session1, status } = useSession();
-  console.log(session1);
+  console.log("session1",session1);
 
   useEffect(() => {
     if (status === "unauthenticated") {
