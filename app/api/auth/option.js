@@ -14,15 +14,9 @@ import CredentialsProvider from "next-auth/providers/credentials";
                  console.log("credentials.email",credentials.email);
               const user = await prisma.patients.findFirst({
                 where: {
-                    AND: [
-                      {
+                     
                         email: credentials.email,
-                      },
-                      {
-                        password: credentials.password,
-                      },
-                    ],
-                  },
+                      
                 });
 
                   if (user) {
