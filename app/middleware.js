@@ -9,4 +9,4 @@ export default withAuth(
   }
 )
 
-export const config = { matcher: ["/PatientPage"] }
+export const config = { matcher: ["/"] }
