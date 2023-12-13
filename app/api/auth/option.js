@@ -28,7 +28,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
     ],
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
-      signIn: "/api/auth/sigin",
+      signIn: "/login",
     },
     
     callbacks: {
