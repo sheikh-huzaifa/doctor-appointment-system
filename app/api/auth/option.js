@@ -28,8 +28,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
     ],
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
-        signIn: '/login',
-      },
+      signIn: "/api/auth/sigin",
+    },
     
     callbacks: {
         async jwt({ token, account }) {
